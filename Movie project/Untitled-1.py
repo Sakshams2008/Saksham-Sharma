@@ -35,8 +35,9 @@ def add_movie():
     conn.commit()
     e.msgbox("Movie added successfully!", "Success")
 
+add_movie()
 cursor = conn.cursor()
-for row in cursor.execute("SELECT * FROM GAMES"):
+for row in cursor.execute("SELECT * FROM Movie"):
     print(row)
 
 conn.commit()
